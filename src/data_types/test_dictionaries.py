@@ -96,3 +96,22 @@ def test_dictionary_update_and_remove():
 
     # pop() with a default does not raise KeyError for a missing key.
     assert scores.pop('dave', None) is None
+
+
+
+
+
+def test_dictionary_retrieval():
+    """Retrieve dictionary entries safely"""
+
+    scores = {'alice': 80, 'bob': 70}
+
+    # get() returns None (or a default) instead of raising KeyError.
+    assert scores.get('carol') is None
+    assert scores.get('carol', 0) == 0
+
+    # items(), keys() and values() give views of the dictionary.
+    assert list(scores.keys()) == ['alice', 'bob']
+    assert list(scores.values()) == [80, 70]
+    assert list(scores.items()) == [('alice', 80), ('bob', 70)]
+
