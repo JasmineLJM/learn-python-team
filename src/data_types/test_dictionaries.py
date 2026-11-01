@@ -77,3 +77,22 @@ def test_dictionary():
     assert dictionary_for_string_keys['sape'] == 4139
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098
+
+
+
+
+def test_dictionary_update_and_remove():
+    """Update and remove dictionary entries"""
+
+    scores = {'alice': 80, 'bob': 70}
+
+    # update() merges another dictionary and overwrites existing keys.
+    scores.update({'bob': 75, 'carol': 90})
+    assert scores == {'alice': 80, 'bob': 75, 'carol': 90}
+
+    # pop() removes a key and returns its value.
+    assert scores.pop('alice') == 80
+    assert 'alice' not in scores
+
+    # pop() with a default does not raise KeyError for a missing key.
+    assert scores.pop('dave', None) is None
