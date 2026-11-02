@@ -77,3 +77,41 @@ def test_dictionary():
     assert dictionary_for_string_keys['sape'] == 4139
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098
+
+
+
+
+def test_dictionary_update_and_remove():
+    """Update and remove dictionary entries"""
+
+    scores = {'alice': 80, 'bob': 70}
+
+    # update() merges another dictionary and overwrites existing keys.
+    scores.update({'bob': 75, 'carol': 90})
+    assert scores == {'alice': 80, 'bob': 75, 'carol': 90}
+
+    # pop() removes a key and returns its value.
+    assert scores.pop('alice') == 80
+    assert 'alice' not in scores
+
+    # pop() with a default does not raise KeyError for a missing key.
+    assert scores.pop('dave', None) is None
+
+
+
+
+
+def test_dictionary_retrieval():
+    """Retrieve dictionary entries safely"""
+
+    scores = {'alice': 80, 'bob': 70}
+
+    # get() returns None (or a default) instead of raising KeyError.
+    assert scores.get('carol') is None
+    assert scores.get('carol', 0) == 0
+
+    # items(), keys() and values() give views of the dictionary.
+    assert list(scores.keys()) == ['alice', 'bob']
+    assert list(scores.values()) == [80, 70]
+    assert list(scores.items()) == [('alice', 80), ('bob', 70)]
+
