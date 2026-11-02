@@ -229,3 +229,13 @@ flake8 ./src --statistics --show-source --count
 ## Author
 
 - [@trekhleb](https://trekhleb.dev)
+
+
+## Team Members and Forks 
+
+| Role | Student Name | Repository |
+| --- | --- | --- |
+| Student A | Ziqing Song | [Original Repository](https://github.com/ZiqingSong/learn-python-team) |
+| Student B | Jie Min Liang | [Fork](https://github.com/JasmineLJM/learn-python-team) |
+| Student C | Cuiyi Long | [Fork](https://github.com/Scarlett9061/learn-python-team) |
+| Student D | Xudong Zhang | [Fork](https://github.com/xddd10/learn-python-team) |
