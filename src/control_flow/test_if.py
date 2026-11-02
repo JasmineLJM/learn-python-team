@@ -49,3 +49,21 @@ def test_if_statement():
     assert get_grade(75) == 'C'
     assert get_grade(65) == 'D'
     assert get_grade(50) == 'F'
+
+
+
+    # Example 2: Nested if statements
+    # Check whether a student is eligible for a scholarship.
+    def check_scholarship(score, attendance):
+        if score >= 85:
+            if attendance >= 90:
+                return 'Eligible'
+            else:
+                return 'Not eligible'
+        else:
+            return 'Not eligible'
+
+    # Test different eligibility conditions.
+    assert check_scholarship(95, 95) == 'Eligible'
+    assert check_scholarship(90, 80) == 'Not eligible'
+    assert check_scholarship(70, 95) == 'Not eligible'
