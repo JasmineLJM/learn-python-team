@@ -342,3 +342,8 @@ def test_list_sort_descending():
     numbers = [3, 1, 2]
     numbers.sort(reverse=True)
     assert numbers == [3, 2, 1]
+
+
+def test_slice_step():
+    numbers = [0, 1, 2, 3, 4]
+    assert numbers[::2] == [0, 2, 4]
