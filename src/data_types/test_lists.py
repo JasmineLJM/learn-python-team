@@ -336,3 +336,9 @@ def test_nested_list_comprehensions():
         (3, 7, 11),
         (4, 8, 12),
     ]
+
+
+def test_list_sort_descending():
+    numbers = [3, 1, 2]
+    numbers.sort(reverse=True)
+    assert numbers == [3, 2, 1]
