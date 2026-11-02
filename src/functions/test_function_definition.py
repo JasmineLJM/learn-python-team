@@ -121,3 +121,15 @@ def test_function_definition():
     greet_with_closure = compose_greet_func_with_closure('John')
 
     assert greet_with_closure() == 'Hello there, John!'
+
+
+
+    # Example 1: Function parameters and return values
+    # This function takes two numbers and returns their sum.
+    def add_numbers(a, b):
+        return a + b
+
+    # Test the function with positive and negative numbers.
+    assert add_numbers(5, 3) == 8
+    assert add_numbers(-2, 2) == 0
+    assert add_numbers(-4, -6) == -10
