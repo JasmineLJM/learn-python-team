@@ -166,8 +166,9 @@ def test_list_methods():
 
     # list.clear()
     # Remove all items from the list. Equivalent to del a[:].
+    assert len(fruits) == 7
     fruits.clear()
-    assert fruits == []
+    assert len(fruits) == 0
 
 
 def test_del_statement():
