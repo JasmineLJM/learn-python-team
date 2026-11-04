@@ -169,6 +169,8 @@ def test_list_methods():
     assert len(fruits) == 7
     fruits.clear()
     assert len(fruits) == 0
+    assert not fruits
+    assert fruits.count('apple') == 0
 
 
 def test_del_statement():
